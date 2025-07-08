@@ -19,11 +19,9 @@ import folium
 from streamlit_folium import st_folium
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
-pth = r'C:\Risma_laptop\Try your best\data sc\AWS_practive\OpenWeather\EC2\NO_openWeatherData_API_04072025.duckdb'
 
 def load_data_from_duckdb(start_date, start_hour, end_date, end_hour):
     con = duckdb.connect('/home/ubuntu/weather_project/03.Outputs/NO_openWeatherData_API.duckdb')
-    # con = duckdb.connect(pth)
     
     # Format dates as ISO strings to use in SQL query
     start_date_str = start_date.isoformat()
