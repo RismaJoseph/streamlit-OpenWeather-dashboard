@@ -45,10 +45,10 @@ for _, row in latlon_key.iterrows():
         new_df = pd.concat([new_df, result], axis=0)
 
     except Exception as e:
-        print(f"❌ Failed for lat={lat_provided}, lon={lon_provided}: {e}")
+        print(f" Failed for lat={lat_provided}, lon={lon_provided}: {e}")
 
 if new_df.empty:
-    print("✅ Script completed — no data collected today.")
+    print(" Script completed — no data collected today.")
     exit()
 
 # === Save to Parquet ===
@@ -61,9 +61,9 @@ try:
         updated = new_df
 
     updated.to_parquet(csv_output_path, index=False)
-    print(f"✅ Weather data saved to Parquet: {csv_output_path}")
+    print(f" Weather data saved to Parquet: {csv_output_path}")
 except Exception as e:
-    print(f"❌ Failed to save weather data to Parquet: {e}")
+    print(f" Failed to save weather data to Parquet: {e}")
 
 # === Save to DuckDB ===
 # Clean/rename columns
@@ -99,6 +99,6 @@ try:
     con.execute("INSERT INTO NOweather_data SELECT * FROM weather_temp")
 
     con.close()
-    print(f"✅ Data successfully written to DuckDB: {DUCKDB_PATH}")
+    print(f" Data successfully written to DuckDB: {DUCKDB_PATH}")
 except Exception as e:
-    print(f"❌ Failed to write to DuckDB: {e}")
+    print(f" Failed to write to DuckDB: {e}")
