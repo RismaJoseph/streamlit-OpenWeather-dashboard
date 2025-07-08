@@ -3,7 +3,7 @@
 # === CONFIGURATION ===
 start_date="2025-06-28"  # set to today's date
 max_days=30
-script_path="/home/ubuntu/weather_project/02.Codes/01.Openweather_fetch_v2.py"
+script_path="/home/ubuntu/weather_project/02.Codes/01.Openweather_APIdata_fetch.py"
 log_file="/home/ubuntu/weather_project/03.Outputs/weather_script_v2.log"
 
 # === LOGIC ===
