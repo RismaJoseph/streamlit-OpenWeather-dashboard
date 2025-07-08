@@ -3,7 +3,7 @@
 # Ensure PATH includes /usr/bin so aws CLI can be found by cron
 export PATH=/usr/local/bin:/usr/bin:/bin
 
-## BEGIN DEBUG & LOGGING 🚀
+## BEGIN DEBUG & LOGGING 
 LOGFILE="/home/ubuntu/weather_project/03.Outputs/s3_upload.log"
 exec &>> "$LOGFILE"        # Redirect stdout & stderr to log
 set -x                      # Echo each command for debugging
