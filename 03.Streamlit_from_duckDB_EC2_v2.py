@@ -79,7 +79,7 @@ else:
 bar_df = df.groupby(['Date_LTC', 'Hour_LTC'])['name'].nunique().reset_index(name='reporting_stations')
 bar_df['datetime'] = pd.to_datetime(bar_df['Date_LTC'].astype(str) + ' ' + bar_df['Hour_LTC'].astype(str) + ':00')
 
-st.subheader("📊 Number of Unique Stations Reporting per Hour per Day")
+st.subheader(" Number of Unique Stations Reporting per Hour per Day")
 fig_bar = px.bar(
     bar_df,
     x='datetime',
