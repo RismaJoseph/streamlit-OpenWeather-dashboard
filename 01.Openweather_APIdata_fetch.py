@@ -6,8 +6,8 @@ import duckdb
 from zoneinfo import ZoneInfo  # Python 3.9+
 
 # Constants
-API_KEY = "30866135c6363a37d9094214a8e419eb"
-LATLON_CSV_PATH = "/home/ubuntu/weather_project/01.Inputs/NO_108weatherST_latlons.csv"
+API_KEY = "" # provide your api key
+LATLON_CSV_PATH = "/home/ubuntu/weather_project/01.Inputs/NO_108weatherST_latlons.csv" # required lat-lon csv files 
 OUTPUT_DIR = "/home/ubuntu/weather_project/03.Outputs"
 CSV_BASENAME = "NO_108weatherST_data.parquet"
 DUCKDB_PATH = "/home/ubuntu/weather_project/03.Outputs/NO_openWeatherData_API.duckdb"
