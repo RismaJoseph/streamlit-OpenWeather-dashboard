@@ -1,0 +1,7 @@
+## crontab
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+0 * * * * /home/ubuntu/weather_project/02.Codes/02.openWeatherData_wrapper.sh >> /home/ubuntu/weather_project/03.Outputs/cron_log.txt 2>&1
+20 1 * * * /home/ubuntu/weather_project/02.Codes/03.openWeatherData_parquet_to_S3AWS.sh >> /home/ubuntu/weather_project/03.Outputs/upload_log.txt 2>&1
+20 1 * * 0 /home/ubuntu/weather_project/02.Codes/05.save_duckdb_to_S3.sh >> /home/ubuntu/weather_project/03.Outputs/duckdbupload_log.txt 2>&1
